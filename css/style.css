@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Gaegu", cursive;
+}
+
+body {
+  background-color: #f8c02e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+body header {
+  padding: 10px;
+  padding-bottom: 3px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+}
+body header #bannerSign {
+  font-size: 1em;
+  padding: 10px;
+  width: 100%;
+}
+body header #bannerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body header #bannerContent h2 {
+  margin: 3px;
+  padding: 10px;
+  margin: auto;
+  font-weight: bold;
+}
+body header #bannerContent img {
+  width: 50px;
+  height: auto;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+body main #mainContent {
+  height: 63em;
+  width: 100%;
+}
+body main #mainContent #mainPoster img {
+  width: 785.2px;
+  height: auto;
+}
+body main #mainContent #logo img {
+  width: 552.33px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+body main #mainContent article h1 {
+  font-size: 2.5em;
+}
+body main #mainContent audio {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */

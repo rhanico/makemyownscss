@@ -1,0 +1,116 @@
+// Variables
+$font-family: 'Gaegu', cursive;
+$primary-color: #f8c02e;
+$banner-padding: 10px;
+$banner-content-padding: 3px;
+$banner-img-width: 50px;
+$main-content-height: 63em;
+$main-poster-width: 785.2px;
+$logo-width: 552.33px;
+$audio-dimensions: 100px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+// Functions
+@function em($value) {
+  @return #{$value}em;
+}
+
+@function px($value) {
+  @return #{$value}px;
+}
+
+// SCSS error-handling directive
+@warn "This is a warning message.";
+
+// Nested selectors
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+
+body {
+  background-color: $primary-color;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+
+  header {
+    padding: $banner-padding;
+    padding-bottom: $banner-content-padding;
+    width: 100%;
+    @include flex-center;
+    margin-top: $banner-content-padding;
+
+    #bannerSign {
+      font-size: 1em;
+      padding: $banner-padding;
+      width: 100%;
+    }
+
+    #bannerContent {
+      @include flex-center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      h2 {
+        margin: $banner-content-padding;
+        padding: $banner-padding;
+        margin: auto;
+        @include font-weight(bold);
+      }
+
+      img {
+        width: $banner-img-width;
+        height: auto;
+      }
+    }
+  }
+
+  main {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+
+    #mainContent {
+      height: $main-content-height;
+      width: 100%;
+
+      #mainPoster img {
+        width: $main-poster-width;
+        height: auto;
+      }
+
+      #logo img {
+        width: $logo-width;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+      }
+
+      article {
+        h1 {
+          font-size: em(2.5);
+        }
+      }
+
+      audio {
+        width: $audio-dimensions;
+        height: $audio-dimensions;
+      }
+    }
+  }
+}
